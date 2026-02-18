@@ -1,5 +1,7 @@
+
+
 public class test {
-    public static void main (String [] args){
+    public static void main(String[] args) {
         AList aList = new AList();
         aList.addy(new Song("El Pibe De Mi Barrio", "Dr. Krapula", 2.47));
 
@@ -13,10 +15,10 @@ public class test {
         System.out.println("\n---- After Adding More Songs ----");
         System.out.println(aList);
 
-        //SLList Testing
+        //GenSLList Testing
         SLList slList = new SLList();
 
-        slList.addy(new Song("Rainy days","Wave to earth",3.20));
+        slList.addy(new Song("Rainy days", "Wave to earth", 3.20));
         slList.addy(new Song("El Pibe De Mi Barrio", "Dr. Krapula", 2.47));
 
         System.out.println("---- Initial Playlist Singly linked list----");
@@ -40,6 +42,25 @@ public class test {
         System.out.println("---- After Removing Index 2 ----");
         System.out.println(dlList);
 
+// GENERIC TESTING
+        Song song1 = new Song("Coral Crown", "Darren Korb", 4.07);
+        Song song2 = new Song("EL Pibe De Mi Barrio", "Dr. Krapula", 2.47);
+        Song song3 = new Song("CASANOVE POSSE", "ALI", 4.00);
 
+        // Swap this one line between GenAList<>(), GenSLList<>(), GenDLList<>()
+        GenSLList<Song> songsList = new GenSLList<>();
+
+        System.out.println(songsList.toString()); // Empty List
+
+        songsList.addy(song1);
+        songsList.addy(song3);
+        songsList.addy(song2);
+        songsList.addy(song1);
+
+        System.out.println(songsList.toString());
+
+        songsList.removy(1); // removes element at index 1
+
+        System.out.println(songsList.toString());
     }
 }
