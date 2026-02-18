@@ -1,21 +1,32 @@
 public class test {
     public static void main (String [] args){
-        AList playlist = new AList();
-        playlist.addy(new Song("El Pibe De Mi Barrio", "Dr. Krapula", 2.47));
-        playlist.addy(new Song("Viva La Vida", "Coldplay", 4.02));
-        playlist.addy(new Song("Bohemian Rhapsody", "Queen", 5.55));
-        playlist.addy(new Song("HUMBLE.", "Kendrick Lamar", 2.57));
-        playlist.addy(new Song("Blinding Lights", "The Weeknd", 3.20));
+        AList aList = new AList();
+        aList.addy(new Song("El Pibe De Mi Barrio", "Dr. Krapula", 2.47));
 
         System.out.println("---- Initial Playlist ----");
-        System.out.println(playlist);
+        System.out.println(aList);
 
-        playlist.removy(4);
+        aList.removy(0);
 
-        playlist.addy(new Song("Lose Yourself", "Eminem", 5.26));
+        aList.addy(new Song("Lose Yourself", "Eminem", 5.26));
 
         System.out.println("\n---- After Adding More Songs ----");
-        System.out.println(playlist);
+        System.out.println(aList);
+
+        SLList slList = new SLList();
+
+        slList.addy(new Song("Rainy days","Wave to earth",3.20));
+        slList.addy(new Song("El Pibe De Mi Barrio", "Dr. Krapula", 2.47));
+
+        System.out.println("---- Initial Playlist ----");
+        System.out.println(slList);
+
+        slList.removy(1);
+
+        System.out.println("---- After Removing Index 1 ----");
+        System.out.println(slList);
+
+
 
     }
 }
